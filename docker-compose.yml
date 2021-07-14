@@ -1,0 +1,13 @@
+version: "3"
+services:
+    loja-react:
+        build: .
+        ports: 
+            - "3000:3000"
+        volumes:
+            - ./src:/app/src
+        environment:
+            - REACT_APP_NAME=HUGO
+            - CHOKIDAR_USEPOLLING=true
+        #env_file: 
+        #    - ./.env
